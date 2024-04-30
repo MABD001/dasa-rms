@@ -20,6 +20,7 @@ export class MenuItemComponent implements OnInit {
 
   ngOnInit(): void {
     this.menu = history.state.menu;
+    this.menu?.menuItem.sort((a, b) => a.id - b.id);
   }
   navigateToAddNewMenuItem(menuItem: Menu): void {
     this.router.navigate(['menu-item/add-new'], { state: { menu: menuItem } });
