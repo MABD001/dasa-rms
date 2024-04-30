@@ -1,0 +1,20 @@
+@media (max-width: 767px) {
+  .navbar.bg-body-tertiary {
+    background-color: white; /* Add your desired color here */
+  }
+}
+
+/* Center nav items */
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+    width: 100%;
+  }
+  .navbar-nav .nav-item {
+    display: inline-block;
+  }
+  .navbar-collapse{
+    z-index: 09999999999;
+    background-color: white !important;;
+  }
+}
