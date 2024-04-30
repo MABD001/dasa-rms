@@ -1,0 +1,23 @@
+<div class="container">
+  <div *ngIf="menu" class="mt-3">
+    <h1 class="mt-3">Add Menu Item</h1>
+    <form #form="ngForm" (ngSubmit) = "onFormSubmit()">
+      <div class="mt-2">
+        <div class="mt-3">
+          <label class="form-label">Menu Item Description</label>
+          <input type="text" id="menuItemDescription" class="form-control" name="menuItemDescription" [(ngModel)]="model.description" />
+        </div>
+        <div class="mt-3">
+          <label class="form-label">Menu Item Price</label>
+          <input type="number" id="menuItemPrice" class="form-control" name="menuItemPrice" [(ngModel)]="model.price" />
+        </div>
+        <div class="mt-3">
+          <button class="btn btn-success" type="submit">Save</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div *ngIf="!menu">
+    <p>Error: Menu object is null or undefined.</p>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+  <h1 class="mt-3"> Customer List</h1>
+  <div class="d-flex justify-content-end mt-3">
+    <a class="btn btn-success" [routerLink]="['add-new']" >Add New</a>
+  </div>
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Contact Number</th>
+      <th scope="col">Last Booked Table</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of customer">
+      <th scope="row">{{ item.id }}</th>
+      <td>{{ item.firstName }}</td>
+      <td>{{ item.lastName }}</td>
+      <td>{{ item.email }}</td>
+      <td>{{ item.contactNumber }}</td>
+      <td>{{ item.lastTable }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
